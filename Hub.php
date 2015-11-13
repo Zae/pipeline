@@ -3,15 +3,15 @@
 namespace Illuminate\Pipeline;
 
 use Closure;
-use Illuminate\Contracts\Container\Container;
-use Illuminate\Contracts\Pipeline\Hub as HubContract;
+use Illuminate\Container\Container;
+use Illuminate\Pipeline\Contracts\Hub as HubContract;
 
 class Hub implements HubContract
 {
     /**
      * The container implementation.
      *
-     * @var \Illuminate\Contracts\Container\Container
+     * @var \Illuminate\Container
      */
     protected $container;
 
@@ -25,7 +25,7 @@ class Hub implements HubContract
     /**
      * Create a new Depot instance.
      *
-     * @param  \Illuminate\Contracts\Container\Container  $container
+     * @param  \Illuminate\Container  $container
      * @return void
      */
     public function __construct(Container $container)

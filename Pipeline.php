@@ -3,15 +3,15 @@
 namespace Illuminate\Pipeline;
 
 use Closure;
-use Illuminate\Contracts\Container\Container;
-use Illuminate\Contracts\Pipeline\Pipeline as PipelineContract;
+use Illuminate\Container\Container;
+use Illuminate\Pipeline\Contracts\Pipeline as PipelineContract;
 
 class Pipeline implements PipelineContract
 {
     /**
      * The container implementation.
      *
-     * @var \Illuminate\Contracts\Container\Container
+     * @var \Illuminate\Container
      */
     protected $container;
 
@@ -39,7 +39,7 @@ class Pipeline implements PipelineContract
     /**
      * Create a new class instance.
      *
-     * @param  \Illuminate\Contracts\Container\Container  $container
+     * @param  \Illuminate\Container  $container
      * @return void
      */
     public function __construct(Container $container)
